@@ -1,0 +1,21 @@
+{
+    "name": "Xyrenn Hacking Toolkit",
+    "short_name": "Xyrenn",
+    "description": "Ultimate Hacking Toolkit for Android",
+    "start_url": "/XyrennHackingToolkit/",
+    "display": "standalone",
+    "background_color": "#0A1929",
+    "theme_color": "#4F7DF3",
+    "icons": [
+        {
+            "src": "icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
