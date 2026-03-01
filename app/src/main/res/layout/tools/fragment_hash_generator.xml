@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/xyrenn_surface">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hash Generator"
+        android:textColor="@color/xyrenn_secondary"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/etInput"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:hint="Text to hash"
+        android:textColor="@color/xyrenn_text_primary"
+        android:textColorHint="@color/xyrenn_text_hint"
+        android:background="@drawable/bg_input"
+        android:padding="12dp"
+        android:gravity="top"
+        android:minLines="2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hash Algorithm:"
+        android:textColor="@color/xyrenn_text_primary"
+        android:layout_marginTop="8dp" />
+
+    <Spinner
+        android:id="@+id/spinnerHashType"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_input"
+        android:layout_marginTop="4dp" />
+
+    <Button
+        android:id="@+id/btnGenerate"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="GENERATE HASH"
+        android:textAllCaps="false"
+        android:layout_marginTop="16dp"
+        style="@style/Widget.Xyrenn.Button.Primary" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:layout_margin="8dp" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ready"
+        android:textColor="@color/xyrenn_text_secondary"
+        android:layout_marginVertical="8dp" />
+
+    <TextView
+        android:id="@+id/tvOutput"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/xyrenn_surface_light"
+        android:textColor="@color/xyrenn_accent"
+        android:padding="8dp"
+        android:textSize="12sp"
+        android:fontFamily="monospace"
+        android:text="Hash will appear here" />
+
+    <Button
+        android:id="@+id/btnCopy"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="COPY TO CLIPBOARD"
+        android:textAllCaps="false"
+        android:layout_marginTop="8dp"
+        style="@style/Widget.Xyrenn.Button.Secondary" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hash Comparison:"
+        android:textColor="@color/xyrenn_text_primary"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <EditText
+            android:id="@+id/etHash1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Hash 1"
+            android:textColor="@color/xyrenn_text_primary"
+            android:textColorHint="@color/xyrenn_text_hint"
+            android:background="@drawable/bg_input"
+            android:padding="8dp"
+            android:layout_marginEnd="4dp"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/etHash2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Hash 2"
+            android:textColor="@color/xyrenn_text_primary"
+            android:textColorHint="@color/xyrenn_text_hint"
+            android:background="@drawable/bg_input"
+            android:padding="8dp"
+            android:layout_marginStart="4dp"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnCompare"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="COMPARE HASHES"
+        android:textAllCaps="false"
+        android:layout_marginTop="8dp"
+        style="@style/Widget.Xyrenn.Button.Primary" />
+
+    <TextView
+        android:id="@+id/tvCompareResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/xyrenn_text_secondary"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>

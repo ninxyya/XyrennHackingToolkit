@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/xyrenn_surface">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Payload Generator"
+        android:textColor="@color/xyrenn_secondary"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/etLhost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="LHOST (Your IP)"
+        android:textColor="@color/xyrenn_text_primary"
+        android:textColorHint="@color/xyrenn_text_hint"
+        android:background="@drawable/bg_input"
+        android:padding="12dp" />
+
+    <EditText
+        android:id="@+id/etLport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="LPORT (4444)"
+        android:textColor="@color/xyrenn_text_primary"
+        android:textColorHint="@color/xyrenn_text_hint"
+        android:background="@drawable/bg_input"
+        android:padding="12dp"
+        android:layout_marginTop="8dp"
+        android:inputType="number"
+        android:text="4444" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Payload Type:"
+        android:textColor="@color/xyrenn_text_primary"
+        android:layout_marginTop="16dp" />
+
+    <Spinner
+        android:id="@+id/spinnerPayloadType"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_input"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Target OS:"
+        android:textColor="@color/xyrenn_text_primary"
+        android:layout_marginTop="8dp" />
+
+    <Spinner
+        android:id="@+id/spinnerTargetOs"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_input"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Output Format:"
+        android:textColor="@color/xyrenn_text_primary"
+        android:layout_marginTop="8dp" />
+
+    <Spinner
+        android:id="@+id/spinnerOutputFormat"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_input"
+        android:layout_marginTop="4dp" />
+
+    <Button
+        android:id="@+id/btnGeneratePayload"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="GENERATE PAYLOAD"
+        android:textAllCaps="false"
+        android:layout_marginTop="24dp"
+        style="@style/Widget.Xyrenn.Button.Primary" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:layout_margin="8dp" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ready"
+        android:textColor="@color/xyrenn_text_secondary"
+        android:layout_marginVertical="8dp" />
+
+    <TextView
+        android:id="@+id/tvPayloadOutput"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/xyrenn_surface_light"
+        android:textColor="@color/xyrenn_accent"
+        android:padding="8dp"
+        android:textSize="12sp"
+        android:fontFamily="monospace"
+        android:scrollbars="vertical" />
+
+    <Button
+        android:id="@+id/btnSavePayload"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="SAVE PAYLOAD"
+        android:textAllCaps="false"
+        android:layout_marginTop="8dp"
+        android:enabled="false"
+        style="@style/Widget.Xyrenn.Button.Secondary" />
+
+</LinearLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/xyrenn_surface">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WiFi Analyzer"
+        android:textColor="@color/xyrenn_secondary"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnAnalyze"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="ANALYZE CHANNELS"
+        android:textAllCaps="false"
+        style="@style/Widget.Xyrenn.Button.Primary" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:layout_margin="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Channel Usage:"
+        android:textColor="@color/xyrenn_text_primary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp" />
+
+    <TextView
+        android:id="@+id/tvChannel1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Channel 1: 0 networks"
+        android:textColor="@color/xyrenn_text_secondary"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/tvChannel6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Channel 6: 0 networks"
+        android:textColor="@color/xyrenn_text_secondary"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/tvChannel11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Channel 11: 0 networks"
+        android:textColor="@color/xyrenn_text_secondary"
+        android:layout_marginTop="4dp" />
+
+</LinearLayout>

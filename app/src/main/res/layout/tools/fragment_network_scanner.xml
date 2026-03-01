@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/xyrenn_surface">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Network Scanner"
+        android:textColor="@color/xyrenn_secondary"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/etSubnet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Subnet (e.g., 192.168.1.0/24)"
+        android:textColor="@color/xyrenn_text_primary"
+        android:textColorHint="@color/xyrenn_text_hint"
+        android:background="@drawable/bg_input"
+        android:padding="12dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/btnStartScan"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="START"
+            android:textAllCaps="false"
+            android:layout_marginEnd="4dp"
+            style="@style/Widget.Xyrenn.Button.Primary" />
+
+        <Button
+            android:id="@+id/btnStopScan"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="STOP"
+            android:textAllCaps="false"
+            android:layout_marginStart="4dp"
+            android:enabled="false"
+            style="@style/Widget.Xyrenn.Button.Secondary" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:layout_margin="8dp" />
+
+    <TextView
+        android:id="@+id/tvDeviceCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Devices: 0"
+        android:textColor="@color/xyrenn_text_secondary"
+        android:layout_marginVertical="8dp" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ready"
+        android:textColor="@color/xyrenn_text_secondary"
+        android:layout_marginBottom="8dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvDevices"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="xyrenn_primary">#0A1929</color>
+    <color name="xyrenn_primary_dark">#0A0F1F</color>
+    <color name="xyrenn_primary_light">#1A2B4A</color>
+    <color name="xyrenn_secondary">#4F7DF3</color>
+    <color name="xyrenn_secondary_dark">#3A5FBF</color>
+    <color name="xyrenn_secondary_light">#6B9AFF</color>
+    <color name="xyrenn_accent">#00BCD4</color>
+    <color name="xyrenn_surface">#121212</color>
+    <color name="xyrenn_surface_light">#1E1E1E</color>
+    <color name="xyrenn_text_primary">#FFFFFF</color>
+    <color name="xyrenn_text_secondary">#B0BEC5</color>
+    <color name="xyrenn_success">#4CAF50</color>
+    <color name="xyrenn_warning">#FFC107</color>
+    <color name="xyrenn_error">#F44336</color>
+</resources>

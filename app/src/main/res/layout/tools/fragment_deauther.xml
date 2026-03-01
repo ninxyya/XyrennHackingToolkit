@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/xyrenn_surface">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deauther"
+        android:textColor="@color/xyrenn_secondary"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/etTargetSsid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Target SSID"
+        android:textColor="@color/xyrenn_text_primary"
+        android:textColorHint="@color/xyrenn_text_hint"
+        android:background="@drawable/bg_input"
+        android:padding="12dp" />
+
+    <Spinner
+        android:id="@+id/spinnerChannel"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_input" />
+
+    <Button
+        android:id="@+id/btnScanClients"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="SCAN CLIENTS"
+        android:textAllCaps="false"
+        android:layout_marginTop="16dp"
+        style="@style/Widget.Xyrenn.Button.Secondary" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:layout_margin="8dp" />
+
+    <TextView
+        android:id="@+id/tvClientCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clients: 0"
+        android:textColor="@color/xyrenn_text_secondary"
+        android:layout_marginTop="8dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvClients"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginVertical="8dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnDeauth"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="DEAUTH"
+            android:textAllCaps="false"
+            android:layout_marginEnd="4dp"
+            style="@style/Widget.Xyrenn.Button.Danger" />
+
+        <Button
+            android:id="@+id/btnDeauthAll"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="DEAUTH ALL"
+            android:textAllCaps="false"
+            android:layout_marginStart="4dp"
+            style="@style/Widget.Xyrenn.Button.Danger" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="STOP"
+        android:textAllCaps="false"
+        android:layout_marginTop="8dp"
+        style="@style/Widget.Xyrenn.Button.Secondary" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Idle"
+        android:textColor="@color/xyrenn_text_secondary"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>

@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/xyrenn_surface">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TV Remote Control"
+            android:textColor="@color/xyrenn_secondary"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btnScanTv"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="SCAN FOR TVs"
+            android:textAllCaps="false"
+            style="@style/Widget.Xyrenn.Button.Primary" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_margin="8dp" />
+
+        <TextView
+            android:id="@+id/tvTvsFound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TVs found: 0"
+            android:textColor="@color/xyrenn_text_secondary"
+            android:layout_marginVertical="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/etTvIp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="TV IP Address"
+                android:textColor="@color/xyrenn_text_primary"
+                android:textColorHint="@color/xyrenn_text_hint"
+                android:background="@drawable/bg_input"
+                android:padding="12dp"
+                android:layout_marginEnd="4dp" />
+
+            <Button
+                android:id="@+id/btnConnectTv"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="CONNECT"
+                android:textAllCaps="false"
+                android:paddingHorizontal="16dp"
+                style="@style/Widget.Xyrenn.Button.Primary" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvConnectionStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Not connected"
+            android:textColor="@color/xyrenn_text_secondary"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:id="@+id/tvLastCommand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Last: None"
+            android:textColor="@color/xyrenn_accent"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Remote Control Layout -->
+        <LinearLayout
+            android:id="@+id/remoteControlLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:alpha="0.5">
+
+            <!-- Power and Basic Controls -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btnPower"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:text="⏻"
+                    android:textSize="24sp"
+                    style="@style/Widget.Xyrenn.Button.Danger" />
+
+                <Button
+                    android:id="@+id/btnMute"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:text="🔇"
+                    android:textSize="20sp"
+                    android:layout_marginHorizontal="16dp"
+                    style="@style/Widget.Xyrenn.Button.Secondary" />
+
+                <Button
+                    android:id="@+id/btnHome"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:text="🏠"
+                    android:textSize="20sp"
+                    style="@style/Widget.Xyrenn.Button.Secondary" />
+
+            </LinearLayout>
+
+            <!-- Volume Controls -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="16dp">
+
+                <Button
+                    android:id="@+id/btnVolumeUp"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:text="VOL +"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="8dp"
+                    style="@style/Widget.Xyrenn.Button.Primary" />
+
+                <Button
+                    android:id="@+id/btnVolumeDown"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:text="VOL -"
+                    android:textSize="16sp"
+                    android:layout_marginStart="8dp"
+                    style="@style/Widget.Xyrenn.Button.Primary" />
+
+            </LinearLayout>
+
+            <!-- Channel Controls -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="16dp">
+
+                <Button
+                    android:id="@+id/btnChannelUp"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:text="CH +"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="8dp"
+                    style="@style/Widget.Xyrenn.Button.Primary" />
+
+                <Button
+                    android:id="@+id/btnChannelDown"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:text="CH -"
+                    android:textSize="16sp"
+                    android:layout_marginStart="8dp"
+                    style="@style/Widget.Xyrenn.Button.Primary" />
+
+            </LinearLayout>
+
+            <!-- Navigation Pad -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="16dp">
+
+                <Button
+                    android:id="@+id/btnUp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:text="▲"
+                    android:textSize="20sp"
+                    style="@style/Widget.Xyrenn.Button.Secondary" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginVertical="4dp">
+
+                    <Button
+                        android:id="@+id/btnLeft"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:text="◀"
+                        android:textSize="20sp"
+                        android:layout_marginEnd="8dp"
+                        style="@style/Widget.Xyrenn.Button.Secondary" />
+
+                    <Button
+                        android:id="@+id/btnOk"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:text="OK"
+                        android:textSize="16sp"
+                        android:layout_marginHorizontal="8dp"
+                        style="@style/Widget.Xyrenn.Button.Primary" />
+
+                    <Button
+                        android:id="@+id/btnRight"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:text="▶"
+                        android:textSize="20sp"
+                        android:layout_marginStart="8dp"
+                        style="@style/Widget.Xyrenn.Button.Secondary" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnDown"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:text="▼"
+                    android:textSize="20sp"
+                    style="@style/Widget.Xyrenn.Button.Secondary" />
+
+            </LinearLayout>
+
+            <!-- Additional Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="16dp">
+
+                <Button
+                    android:id="@+id/btnBack"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:text="↩"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="8dp"
+                    style="@style/Widget.Xyrenn.Button.Secondary" />
+
+                <Button
+                    android:id="@+id/btnMenu"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:text="☰"
+                    android:textSize="24sp"
+                    android:layout_marginHorizontal="8dp"
+                    style="@style/Widget.Xyrenn.Button.Secondary" />
+
+                <Button
+                    android:id="@+id/btnDisconnect"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:text="✕"
+                    android:textSize="24sp"
+                    android:layout_marginStart="8dp"
+                    style="@style/Widget.Xyrenn.Button.Danger" />
+
+            </LinearLayout>
+
+            <!-- Number Pad -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Number Pad"
+                android:textColor="@color/xyrenn_text_primary"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="1"
+                    android:textSize="18sp"
+                    android:layout_margin="4dp"
+                    style="@style/Widget.Xyrenn.Button.Secondary" />
+
+                <Button
+                    android:id="@+id/btn2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="2"
+                    android:textSize="18sp"
+                    android:layout_margin="4dp"
+                    style="@style/Widget.Xyrenn.Button.Secondary" />
+
+                <Button
+                    android:id="@+id/btn3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="3"
+                    android:textSize="18sp"
+                    android:layout_margin="4dp"
+                    style="@style/Widget.Xyrenn.Button.Secondary" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn4"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="4"
+                    android:textSize="18sp"
+                    android:layout_margin="4dp"
+                    style="@style/Widget.Xyrenn.Button.Secondary" />
+
+                <Button
+                    android:id="@+id/btn5"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="5"
+                    android:textSize="18sp"
+                    android:layout_margin="4dp"
+                    style="@style/Widget.Xyrenn.Button.Secondary" />
+
+                <Button
+                    android:id="@+id/btn6"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="6"
+                    android:textSize="18sp"
+                    android:layout_margin="4dp"
+                    style="@style/Widget.Xyrenn.Button.Secondary" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn7"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="7"
+                    android:textSize="18sp"
+                    android:layout_margin="4dp"
+                    style="@style/Widget.Xyrenn.Button.Secondary" />
+
+                <Button
+                    android:id="@+id/btn8"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="8"
+                    android:textSize="18sp"
+                    android:layout_margin="4dp"
+                    style="@style/Widget.Xyrenn.Button.Secondary" />
+
+                <Button
+                    android:id="@+id/btn9"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="9"
+                    android:textSize="18sp"
+                    android:layout_margin="4dp"
+                    style="@style/Widget.Xyrenn.Button.Secondary" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn0"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="0"
+                    android:textSize="18sp"
+                    android:layout_margin="4dp"
+                    style="@style/Widget.Xyrenn.Button.Secondary" />
+
+            </LinearLayout>
+
+            <!-- App Shortcuts -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="App Shortcuts"
+                android:textColor="@color/xyrenn_text_primary"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btnNetflix"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:text="Netflix"
+                    android:textAllCaps="false"
+                    android:layout_marginEnd="4dp"
+                    style="@style/Widget.Xyrenn.Button.Primary" />
+
+                <Button
+                    android:id="@+id/btnYoutube"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:text="YouTube"
+                    android:textAllCaps="false"
+                    android:layout_marginHorizontal="4dp"
+                    style="@style/Widget.Xyrenn.Button.Primary" />
+
+                <Button
+                    android:id="@+id/btnPrime"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:text="Prime"
+                    android:textAllCaps="false"
+                    android:layout_marginStart="4dp"
+                    style="@style/Widget.Xyrenn.Button.Primary" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/xyrenn_surface">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IR Blaster"
+            android:textColor="@color/xyrenn_secondary"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:id="@+id/tvIrStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IR Blaster ready"
+            android:textColor="@color/xyrenn_success"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:id="@+id/tvLastCommand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Last: None"
+            android:textColor="@color/xyrenn_accent"
+            android:layout_marginBottom="16dp" />
+
+        <!-- TV Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TV"
+            android:textColor="@color/xyrenn_text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnTvPower"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="⏻"
+                android:textSize="24sp"
+                android:layout_margin="4dp"
+                style="@style/Widget.Xyrenn.Button.Danger" />
+
+            <Button
+                android:id="@+id/btnTvVolUp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="VOL+"
+                android:textSize="16sp"
+                android:layout_margin="4dp"
+                style="@style/Widget.Xyrenn.Button.Primary" />
+
+            <Button
+                android:id="@+id/btnTvVolDown"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="VOL-"
+                android:textSize="16sp"
+                android:layout_margin="4dp"
+                style="@style/Widget.Xyrenn.Button.Primary" />
+
+            <Button
+                android:id="@+id/btnTvMute"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="🔇"
+                android:textSize="20sp"
+                android:layout_margin="4dp"
+                style="@style/Widget.Xyrenn.Button.Secondary" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="4dp">
+
+            <Button
+                android:id="@+id/btnTvChUp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="CH+"
+                android:textSize="16sp"
+                android:layout_margin="4dp"
+                style="@style/Widget.Xyrenn.Button.Primary" />
+
+            <Button
+                android:id="@+id/btnTvChDown"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="CH-"
+                android:textSize="16sp"
+                android:layout_margin="4dp"
+                style="@style/Widget.Xyrenn.Button.Primary" />
+
+        </LinearLayout>
+
+        <!-- AC Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Air Conditioner"
+            android:textColor="@color/xyrenn_text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnAcPower"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="⏻"
+                android:textSize="24sp"
+                android:layout_margin="4dp"
+                style="@style/Widget.Xyrenn.Button.Danger" />
+
+            <Button
+                android:id="@+id/btnAcTempUp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="TEMP+"
+                android:textSize="12sp"
+                android:layout_margin="4dp"
+                style="@style/Widget.Xyrenn.Button.Primary" />
+
+            <Button
+                android:id="@+id/btnAcTempDown"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="TEMP-"
+                android:textSize="12sp"
+                android:layout_margin="4dp"
+                style="@style/Widget.Xyrenn.Button.Primary" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="4dp">
+
+            <Button
+                android:id="@+id/btnAcMode"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="MODE"
+                android:textSize="12sp"
+                android:layout_margin="4dp"
+                style="@style/Widget.Xyrenn.Button.Secondary" />
+
+            <Button
+                android:id="@+id/btnAcFan"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="FAN"
+                android:textSize="12sp"
+                android:layout_margin="4dp"
+                style="@style/Widget.Xyrenn.Button.Secondary" />
+
+        </LinearLayout>
+
+        <!-- Soundbar Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Soundbar"
+            android:textColor="@color/xyrenn_text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnSoundbarPower"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="⏻"
+                android:textSize="24sp"
+                android:layout_margin="4dp"
+                style="@style/Widget.Xyrenn.Button.Danger" />
+
+            <Button
+                android:id="@+id/btnSoundbarVolUp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="VOL+"
+                android:textSize="12sp"
+                android:layout_margin="4dp"
+                style="@style/Widget.Xyrenn.Button.Primary" />
+
+            <Button
+                android:id="@+id/btnSoundbarVolDown"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="VOL-"
+                android:textSize="12sp"
+                android:layout_margin="4dp"
+                style="@style/Widget.Xyrenn.Button.Primary" />
+
+        </LinearLayout>
+
+        <!-- Projector Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Projector"
+            android:textColor="@color/xyrenn_text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnProjectorPower"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="⏻"
+                android:textSize="24sp"
+                android:layout_margin="4dp"
+                style="@style/Widget.Xyrenn.Button.Danger" />
+
+            <Button
+                android:id="@+id/btnProjectorInput"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="INPUT"
+                android:textSize="12sp"
+                android:layout_margin="4dp"
+                style="@style/Widget.Xyrenn.Button.Secondary" />
+
+        </LinearLayout>
+
+        <!-- Fan Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fan"
+            android:textColor="@color/xyrenn_text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnFanPower"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="⏻"
+                android:textSize="24sp"
+                android:layout_margin="4dp"
+                style="@style/Widget.Xyrenn.Button.Danger" />
+
+            <Button
+                android:id="@+id/btnFanSpeed"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="SPEED"
+                android:textSize="12sp"
+                android:layout_margin="4dp"
+                style="@style/Widget.Xyrenn.Button.Primary" />
+
+        </LinearLayout>
+
+        <!-- Custom IR -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Custom IR Code"
+            android:textColor="@color/xyrenn_text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/etCustomHex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter HEX code (e.g., 0x00FF22DD)"
+            android:textColor="@color/xyrenn_text_primary"
+            android:textColorHint="@color/xyrenn_text_hint"
+            android:background="@drawable/bg_input"
+            android:padding="12dp" />
+
+        <Button
+            android:id="@+id/btnCustomIr"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="SEND CUSTOM IR"
+            android:textAllCaps="false"
+            android:layout_marginTop="8dp"
+            style="@style/Widget.Xyrenn.Button.Primary" />
+
+    </LinearLayout>
+
+</ScrollView>

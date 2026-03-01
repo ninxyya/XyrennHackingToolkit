@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/xyrenn_surface">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Spam Scheduler"
+        android:textColor="@color/xyrenn_secondary"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/etPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Phone Number"
+        android:textColor="@color/xyrenn_text_primary"
+        android:textColorHint="@color/xyrenn_text_hint"
+        android:background="@drawable/bg_input"
+        android:padding="12dp"
+        android:inputType="phone" />
+
+    <EditText
+        android:id="@+id/etMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Message"
+        android:textColor="@color/xyrenn_text_primary"
+        android:textColorHint="@color/xyrenn_text_hint"
+        android:background="@drawable/bg_input"
+        android:padding="12dp"
+        android:layout_marginTop="8dp"
+        android:minLines="3"
+        android:gravity="top" />
+
+    <EditText
+        android:id="@+id/etCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Number of messages"
+        android:textColor="@color/xyrenn_text_primary"
+        android:textColorHint="@color/xyrenn_text_hint"
+        android:background="@drawable/bg_input"
+        android:padding="12dp"
+        android:layout_marginTop="8dp"
+        android:inputType="number"
+        android:text="1" />
+
+    <Button
+        android:id="@+id/btnSelectTime"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="SELECT TIME"
+        android:textAllCaps="false"
+        android:layout_marginTop="16dp"
+        style="@style/Widget.Xyrenn.Button.Secondary" />
+
+    <TextView
+        android:id="@+id/tvSelectedTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No time selected"
+        android:textColor="@color/xyrenn_text_secondary"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/btnSchedule"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="SCHEDULE"
+        android:textAllCaps="false"
+        android:layout_marginTop="16dp"
+        style="@style/Widget.Xyrenn.Button.Primary" />
+
+    <Button
+        android:id="@+id/btnCancelSchedule"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="CANCEL SCHEDULE"
+        android:textAllCaps="false"
+        android:layout_marginTop="8dp"
+        android:enabled="false"
+        style="@style/Widget.Xyrenn.Button.Danger" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:layout_margin="8dp" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ready"
+        android:textColor="@color/xyrenn_text_secondary"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>

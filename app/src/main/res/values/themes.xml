@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Xyrenn" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/xyrenn_primary</item>
+        <item name="colorOnPrimary">@color/xyrenn_text_primary</item>
+        <item name="colorSecondary">@color/xyrenn_secondary</item>
+        <item name="colorOnSecondary">@color/xyrenn_text_primary</item>
+        <item name="colorSurface">@color/xyrenn_surface</item>
+        <item name="colorOnSurface">@color/xyrenn_text_primary</item>
+        <item name="android:statusBarColor">@color/xyrenn_primary_dark</item>
+    </style>
+    
+    <style name="Theme.Xyrenn.Splash" parent="Theme.Xyrenn">
+        <item name="android:windowBackground">@drawable/bg_splash</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    
+    <style name="Widget.Xyrenn.Button.Primary" parent="Widget.Material3.Button">
+        <item name="android:textColor">@color/xyrenn_text_primary</item>
+        <item name="android:backgroundTint">@color/xyrenn_secondary</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+    
+    <style name="Widget.Xyrenn.TextInputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/xyrenn_secondary</item>
+        <item name="hintTextColor">@color/xyrenn_text_secondary</item>
+    </style>
+</resources>
